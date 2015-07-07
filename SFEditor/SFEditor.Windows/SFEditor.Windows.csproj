@@ -43,6 +43,9 @@
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>..\..\ThirdParty\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
+    <Reference Include="Xwt.Gtk.Windows">
+      <HintPath>..\..\ThirdParty\Xwt\Gtk\Xwt.Gtk.Windows.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />

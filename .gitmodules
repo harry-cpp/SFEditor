@@ -1,0 +1,3 @@
+[submodule "ThirdParty/XwtPlus.TextEditor"]
+	path = ThirdParty/XwtPlus.TextEditor
+	url = https://github.com/cra0zy/XwtPlus.TextEditor.git

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFWidget", "SFWidget\SFWidget.csproj", "{E325E707-DC6A-4227-9B4F-9A42703D39CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XwtPlus.TextEditor", "ThirdParty\XwtPlus.TextEditor\XwtPlus.TextEditor\XwtPlus.TextEditor.csproj", "{FA8374B9-9E2A-40CE-9291-640419E64301}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SFEditor", "SFEditor", "{514F1046-B17A-47FE-94AE-DEB47946D9D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "SFEditor\Common\Common.csproj", "{1EA39B91-4F52-47DC-8B6F-B9E4EAE4ADE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFEditor.Linux", "SFEditor\SFEditor.Linux\SFEditor.Linux.csproj", "{4F4ABD91-F2A9-4768-9BF6-253BAEB7D2C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFEditor.Windows", "SFEditor\SFEditor.Windows\SFEditor.Windows.csproj", "{34C7DF7B-81DC-4810-B433-FC575A1EFF73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EA39B91-4F52-47DC-8B6F-B9E4EAE4ADE7}.Debug|x86.ActiveCfg = Debug|x86
+		{1EA39B91-4F52-47DC-8B6F-B9E4EAE4ADE7}.Debug|x86.Build.0 = Debug|x86
+		{1EA39B91-4F52-47DC-8B6F-B9E4EAE4ADE7}.Release|x86.ActiveCfg = Release|x86
+		{1EA39B91-4F52-47DC-8B6F-B9E4EAE4ADE7}.Release|x86.Build.0 = Release|x86
+		{34C7DF7B-81DC-4810-B433-FC575A1EFF73}.Debug|x86.ActiveCfg = Debug|x86
+		{34C7DF7B-81DC-4810-B433-FC575A1EFF73}.Debug|x86.Build.0 = Debug|x86
+		{34C7DF7B-81DC-4810-B433-FC575A1EFF73}.Release|x86.ActiveCfg = Release|x86
+		{34C7DF7B-81DC-4810-B433-FC575A1EFF73}.Release|x86.Build.0 = Release|x86
+		{4F4ABD91-F2A9-4768-9BF6-253BAEB7D2C8}.Debug|x86.ActiveCfg = Debug|x86
+		{4F4ABD91-F2A9-4768-9BF6-253BAEB7D2C8}.Debug|x86.Build.0 = Debug|x86
+		{4F4ABD91-F2A9-4768-9BF6-253BAEB7D2C8}.Release|x86.ActiveCfg = Release|x86
+		{4F4ABD91-F2A9-4768-9BF6-253BAEB7D2C8}.Release|x86.Build.0 = Release|x86
+		{E325E707-DC6A-4227-9B4F-9A42703D39CD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E325E707-DC6A-4227-9B4F-9A42703D39CD}.Debug|x86.Build.0 = Debug|Any CPU
+		{E325E707-DC6A-4227-9B4F-9A42703D39CD}.Release|x86.ActiveCfg = Release|Any CPU
+		{E325E707-DC6A-4227-9B4F-9A42703D39CD}.Release|x86.Build.0 = Release|Any CPU
+		{FA8374B9-9E2A-40CE-9291-640419E64301}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FA8374B9-9E2A-40CE-9291-640419E64301}.Debug|x86.Build.0 = Debug|Any CPU
+		{FA8374B9-9E2A-40CE-9291-640419E64301}.Release|x86.ActiveCfg = Release|Any CPU
+		{FA8374B9-9E2A-40CE-9291-640419E64301}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1EA39B91-4F52-47DC-8B6F-B9E4EAE4ADE7} = {514F1046-B17A-47FE-94AE-DEB47946D9D3}
+		{4F4ABD91-F2A9-4768-9BF6-253BAEB7D2C8} = {514F1046-B17A-47FE-94AE-DEB47946D9D3}
+		{34C7DF7B-81DC-4810-B433-FC575A1EFF73} = {514F1046-B17A-47FE-94AE-DEB47946D9D3}
+	EndGlobalSection
+EndGlobal

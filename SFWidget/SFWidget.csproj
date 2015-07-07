@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E325E707-DC6A-4227-9B4F-9A42703D39CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SFWidget</RootNamespace>
+    <AssemblyName>SFWidget</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>..\ThirdParty\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Xwt">
+      <HintPath>..\ThirdParty\Xwt\Gtk\Xwt.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\CharacterRegion.cs" />
+    <Compile Include="Core\PathHelper.cs" />
+    <Compile Include="Dialogs\CharDialog.GUI.cs" />
+    <Compile Include="Dialogs\CharDialog.cs" />
+    <Compile Include="Widgets\CharWidget.GUI.cs" />
+    <Compile Include="Widgets\CharWidget.cs" />
+    <Compile Include="Widgets\NumericEntry.GUI.cs" />
+    <Compile Include="Widgets\NumericEntry.cs" />
+    <Compile Include="SFWidget.cs" />
+    <Compile Include="SFWidget.GUI.cs" />
+    <Compile Include="SFWidget.TabA.cs" />
+    <Compile Include="SFWidget.TabB.cs" />
+    <Compile Include="SFWidget.TabC.cs" />
+    <Compile Include="SFWidget.TabD.cs" />
+    <Compile Include="Core\ESaveError.cs" />
+    <Compile Include="Core\Core.cs" />
+    <Compile Include="Core\CharRegionsUtil.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Dialogs\" />
+    <Folder Include="Widgets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\font.spritefont">
+      <LogicalName>Resources.font.spritefont</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\dragrec.png">
+      <LogicalName>Resources.dragrec.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <TextStylePolicy inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/x-csharp" />
+          <CSharpFormattingPolicy IndentSwitchBody="True" IndentBlocksInsideExpressions="True" AnonymousMethodBraceStyle="NextLine" PropertyBraceStyle="NextLine" PropertyGetBraceStyle="NextLine" PropertySetBraceStyle="NextLine" EventBraceStyle="NextLine" EventAddBraceStyle="NextLine" EventRemoveBraceStyle="NextLine" StatementBraceStyle="NextLine" ElseNewLinePlacement="NewLine" CatchNewLinePlacement="NewLine" FinallyNewLinePlacement="NewLine" WhileNewLinePlacement="DoNotCare" ArrayInitializerWrapping="DoNotChange" ArrayInitializerBraceStyle="NextLine" BeforeMethodDeclarationParentheses="False" BeforeMethodCallParentheses="False" BeforeConstructorDeclarationParentheses="False" NewLineBeforeConstructorInitializerColon="NewLine" NewLineAfterConstructorInitializerColon="SameLine" BeforeDelegateDeclarationParentheses="False" NewParentheses="False" SpacesBeforeBrackets="False" inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\ThirdParty\XwtPlus.TextEditor\XwtPlus.TextEditor\XwtPlus.TextEditor.csproj">
+      <Project>{FA8374B9-9E2A-40CE-9291-640419E64301}</Project>
+      <Name>XwtPlus.TextEditor</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

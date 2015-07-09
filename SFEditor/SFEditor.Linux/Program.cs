@@ -13,7 +13,7 @@ namespace SFEditor.Linux
             Settings.Init(Platform.Linux, ToolkitType.Gtk3, new[] { ToolkitType.Gtk, ToolkitType.Gtk3 });
             Application.Initialize(Settings.GetToolkit());
 
-            MainWindow window = new MainWindow(args);
+            var window = new MainWindow(args);
             window.Show();
 
             Application.Run();

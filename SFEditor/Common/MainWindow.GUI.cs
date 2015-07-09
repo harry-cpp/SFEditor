@@ -5,7 +5,7 @@ namespace SFEditor
 {
     public partial class MainWindow
 	{
-        SFWidget sfwidget1;
+        public SFWidget sfwidget1;
         Menu menu1;
         MenuItem menuitem_new, menuitem_open, menuitem_save, menuitem_saveas, menuitem_exit;
 

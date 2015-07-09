@@ -40,7 +40,6 @@ My TODO List for this project
 -----------------------------
 * Add code for ProjectDirty
 * Implement Undo / Redo to XwtPlus.TextEditor
-* Add a Linux headerbar version of it
 * Setup some extension API for MonoGame Pipeline tool and connect this to it
 * Add a setup for easy installation
 

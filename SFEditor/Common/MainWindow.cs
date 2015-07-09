@@ -27,7 +27,7 @@ namespace SFEditor
             }
         }
 
-        private void ReloadTitle()
+        public virtual void ReloadTitle()
         {
             string title = "Spritefont Editor";
 
@@ -60,7 +60,7 @@ namespace SFEditor
                 mi.Checked = false;
         }
 
-        private void SaveAs()
+        public void SaveAs()
         {
             var sfdialog = new SaveFileDialog();
             sfdialog.Filters.Add(_spritefontFileFilter);
@@ -79,13 +79,13 @@ namespace SFEditor
             ReloadTitle();
         }
 
-        protected void NewClicked (object sender, EventArgs e)
+        public void NewClicked (object sender, EventArgs e)
         {
             sfwidget1.New();
             ReloadTitle();
         }
 
-        protected void OpenClicked (object sender, EventArgs e)
+        public void OpenClicked (object sender, EventArgs e)
         {
             var ofdialog = new OpenFileDialog();
             ofdialog.Multiselect = false;
@@ -100,7 +100,7 @@ namespace SFEditor
             ReloadTitle();
         }
 
-        protected void SaveClicked (object sender, EventArgs e)
+        public void SaveClicked (object sender, EventArgs e)
         {
             var err = sfwidget1.Save();
 
@@ -111,7 +111,7 @@ namespace SFEditor
             ReloadTitle();
         }
 
-        protected void OnWindowClosed(object sender, EventArgs e)
+        public void OnWindowClosed(object sender, EventArgs e)
         {
             Application.Exit();
         }

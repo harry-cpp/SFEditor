@@ -3,11 +3,11 @@ using Xwt;
 
 namespace SFEditor
 {
-    public partial class MainWindow
+    public partial class MainWindowBase
 	{
         public SFWidget sfwidget1;
-        Menu menu1;
-        MenuItem menuitem_new, menuitem_open, menuitem_save, menuitem_saveas, menuitem_exit;
+        public Menu menu1;
+        public MenuItem menuitem_new, menuitem_open, menuitem_save, menuitem_saveas, menuitem_exit, menuitem_toolkit;
 
         private void Build()
         {
@@ -43,20 +43,23 @@ namespace SFEditor
             fileMenuItem.SubMenu = fileMenu;
             menu1.Items.Add (fileMenuItem);
 
-            MenuItem toolKitMenuItem = new MenuItem ("Toolkit");
-            Menu toolKitMenu = new Menu ();
-
-            foreach (var t in Settings.SuportedPlatformToolkits)
+            if (Settings.SuportedPlatformToolkits.Length > 1)
             {
-                var m = new RadioButtonMenuItem(t.ToString());
-                m.Checked = (t == Settings.GetToolkit());
-                m.Clicked += ToolKitClicked;
-                m.Tag = t;
-                toolKitMenu.Items.Add(m);
-            }
+                menuitem_toolkit = new MenuItem("Toolkit");
+                var toolKitMenu = new Menu();
 
-            toolKitMenuItem.SubMenu = toolKitMenu;
-            menu1.Items.Add (toolKitMenuItem);
+                foreach (var t in Settings.SuportedPlatformToolkits)
+                {
+                    var m = new RadioButtonMenuItem(t.ToString());
+                    m.Checked = (t == Settings.GetToolkit());
+                    m.Clicked += ToolKitClicked;
+                    m.Tag = t;
+                    toolKitMenu.Items.Add(m);
+                }
+
+                menuitem_toolkit.SubMenu = toolKitMenu;
+                menu1.Items.Add(menuitem_toolkit);
+            }
 
             this.MainMenu = menu1;
 

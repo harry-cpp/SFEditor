@@ -8,8 +8,8 @@ namespace SFEditor
         [STAThread]
         static void Main(string[] args)
         {
-            Settings.Init(Platform.Windows, ToolkitType.Wpf, new[] { ToolkitType.Gtk, ToolkitType.Wpf });
-            Application.Initialize(Settings.GetToolkit());
+            Settings.Init(Platform.Linux, ToolkitType.Gtk, new[] { ToolkitType.Gtk });
+            Application.Initialize(ToolkitType.Gtk);
 
             var window = new MainWindowBase(args);
             window.Show();

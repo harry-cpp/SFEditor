@@ -1,9 +1,7 @@
 ﻿using System;
 using Xwt;
 
-using SFEditor;
-
-namespace SFEditor.GNOME
+namespace SFEditor
 {
     class Program
     {

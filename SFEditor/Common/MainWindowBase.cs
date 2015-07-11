@@ -3,12 +3,12 @@ using Xwt;
 
 namespace SFEditor
 {
-    public partial class MainWindow: Window
+    public partial class MainWindowBase: Window
     {
         FileDialogFilter _spritefontFileFilter;
         FileDialogFilter _anyFilesFilter;
 
-        public MainWindow(string[] args)
+        public MainWindowBase(string[] args)
         {
             this.Build();
             ReloadTitle();

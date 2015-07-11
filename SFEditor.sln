@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SFEditor", "SFEditor", "{51
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "SFEditor\Common\Common.csproj", "{1EA39B91-4F52-47DC-8B6F-B9E4EAE4ADE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFEditor.Linux", "SFEditor\SFEditor.Linux\SFEditor.Linux.csproj", "{4F4ABD91-F2A9-4768-9BF6-253BAEB7D2C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFEditor.Linux.Gtk2", "SFEditor\SFEditor.Linux.Gtk2\SFEditor.Linux.Gtk2.csproj", "{4F4ABD91-F2A9-4768-9BF6-253BAEB7D2C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFEditor.Windows", "SFEditor\SFEditor.Windows\SFEditor.Windows.csproj", "{34C7DF7B-81DC-4810-B433-FC575A1EFF73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFEditor.GNOME", "SFEditor\SFEditor.GNOME\SFEditor.GNOME.csproj", "{BE46E22C-AB16-4EAF-A16D-629CC982F96A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFEditor.Linux.Gtk3", "SFEditor\SFEditor.Linux.Gtk3\SFEditor.Linux.Gtk3.csproj", "{BE46E22C-AB16-4EAF-A16D-629CC982F96A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

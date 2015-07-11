@@ -1,13 +1,14 @@
-﻿using System;
-using SFEditor;
+﻿using System.Diagnostics;
 using Gtk;
 
 using UI = Gtk.Builder.ObjectAttribute;
 
-namespace SFEditor.GNOME
+namespace SFEditor
 {
-    public class HeaderBarWindow : MainWindow
+    public class HeaderBarWindow : MainWindowBase
     {
+        bool UseHeaderBar = Global.MajorVersion == 3 && Global.MinorVersion >= 9;
+
         HeaderBar headerbar1;
 
         [UI] Button new_button;
@@ -17,6 +18,21 @@ namespace SFEditor.GNOME
 
         public HeaderBarWindow(string[] program_args) : base(program_args)
         {
+            Process proc = new Process ();
+            proc.StartInfo.FileName = "/bin/bash";
+            proc.StartInfo.Arguments = "-c \"echo $XDG_CURRENT_DESKTOP\"";
+            proc.StartInfo.UseShellExecute = false; 
+            proc.StartInfo.RedirectStandardOutput = true;
+            proc.Start ();
+
+            while (!proc.StandardOutput.EndOfStream) {
+                string line = proc.StandardOutput.ReadLine ();
+                UseHeaderBar &= (line == "GNOME");
+            }
+
+            if (!UseHeaderBar)
+                return;
+
             this.MainMenu = new Xwt.Menu();
             Xwt.GtkBackend.GtkEngine ge = new Xwt.GtkBackend.GtkEngine();
             var gtk_window = (Window)ge.GetNativeParentWindow(this.Content);
@@ -43,6 +59,12 @@ namespace SFEditor.GNOME
 
         public override void ReloadTitle()
         {
+            if (!UseHeaderBar)
+            {
+                base.ReloadTitle();
+                return;
+            }
+
             if (headerbar1 == null)
                 return;
 

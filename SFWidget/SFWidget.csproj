@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E325E707-DC6A-4227-9B4F-9A42703D39CD}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>SFWidget</RootNamespace>
+    <RootNamespace>SFEditor</RootNamespace>
     <AssemblyName>SFWidget</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>

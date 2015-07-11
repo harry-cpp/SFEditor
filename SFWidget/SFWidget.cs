@@ -1,5 +1,6 @@
 ﻿using System;
 using Xwt;
+using System.IO;
 
 namespace SFEditor
 {
@@ -83,6 +84,9 @@ namespace SFEditor
         {
             var ofdialog = new OpenFileDialog();
 
+            if (!string.IsNullOrEmpty(FileName))
+                ofdialog.CurrentFolder = Path.GetDirectoryName(FileName);
+
             ofdialog.Multiselect = false;
             ofdialog.Filters.Add(_ttfFileFilter);
             ofdialog.Filters.Add(_anyFilesFilter);
@@ -90,7 +94,8 @@ namespace SFEditor
             var result = ofdialog.Run (this.ParentWindow);
             if (result)
             {
-                entry_font.Text = PathHelper.GetRelativePath(AppDomain.CurrentDomain.BaseDirectory, ofdialog.FileName);
+                entry_font.Text = !string.IsNullOrEmpty(FileName) ? 
+                    PathHelper.GetRelativePath(Path.GetDirectoryName(FileName), ofdialog.FileName) : ofdialog.FileName;
                 SaveFont();
             }
 

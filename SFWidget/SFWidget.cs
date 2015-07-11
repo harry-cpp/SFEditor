@@ -53,7 +53,7 @@ namespace SFEditor
 
         void Combo_font_SelectionChanged (object sender, EventArgs e)
         {
-            combo_font.Font = Xwt.Drawing.Font.FromName(combo_font.SelectedText);
+            combo_font.Font = Xwt.Drawing.Font.FromName(combo_font.SelectedText).WithSize(combo_font.Font.Size);
             SaveFont();
         }
 

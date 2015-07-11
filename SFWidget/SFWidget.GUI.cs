@@ -57,7 +57,7 @@ namespace SFEditor
                 combo_font.SelectedText = "Arial";
             else if(combo_font.Items.Count > 0)
                 combo_font.SelectedIndex = 0;
-            combo_font.Font = Xwt.Drawing.Font.FromName(combo_font.SelectedText);
+            combo_font.Font = Xwt.Drawing.Font.FromName(combo_font.SelectedText).WithSize(combo_font.Font.Size);
 
             table1.Add(combo_font, 1, 0, 1, 1, true);
 

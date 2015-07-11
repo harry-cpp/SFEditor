@@ -1,9 +1,13 @@
 ﻿using Xwt;
+using System.Drawing.Text;
+using System;
+using System.IO;
 
 namespace SFEditor
 {
     public partial class SFWidget
     {
+        string font, fontloc;
         bool donce = false;
 
         private void InitalizeD()
@@ -15,9 +19,23 @@ namespace SFEditor
         {
             if (radioButton2.Active)
             {
-                MessageDialog.ShowError("Sorry, Preview is only suported for system fonts :(");
-                return;
+                try
+                {
+                    fontloc = string.IsNullOrEmpty(FileName) ?
+                        entry_font.Text : Path.GetFullPath((new Uri(Path.Combine(Path.GetDirectoryName(FileName), entry_font.Text))).LocalPath);
+
+                    PrivateFontCollection fontCol = new PrivateFontCollection();
+                    fontCol.AddFontFile(fontloc);
+                    font = fontCol.Families[0].Name;
+                }
+                catch
+                {
+                    MessageDialog.ShowError("Could not load the font :(");
+                    return;
+                }
             }
+            else
+                font = _core.Font;
 
             web1.LoadHtml(GenerateHTML(), "");
         }
@@ -26,7 +44,10 @@ namespace SFEditor
         {
             string html = "<html><head><style>body {";
 
-            html += "font-family: " + _core.Font + ";";
+            html += "font-family: " + font + ";";
+
+            if (radioButton2.Active)
+                html += "src: url(" + fontloc + ");";
 
             if (_core.Bold)
                 html += "font-weight: bold;";

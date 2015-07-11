@@ -30,7 +30,7 @@ I don't have a Mac so I can't compile for it, but you could build a Mac version 
 1. Build Xwt for Mac from: https://github.com/mono/xwt/tree/a9014f461e23d27e393b9d89180b2ade92e0b168
 2. Copy Xwt.Gtk.Mac and Xwt.Mac dll files to ThirdParty/Xwt/Gtk and ThirdParty/Xwt/Mac folders
 3. Create a project SFEditor.Mac that has the above dll referenced, plus as well has ThirdParty/Xwt/Gtk/Gtk.dll referenced, and ThirdParty/Xwt/Gtk/Gtk.dll.config added as link and set to "copy if newer"
-4. For "Program.cs" use a copy of https://github.com/cra0zy/SFEditor/blob/master/SFEditor/SFEditor.Linux/Program.cs#L13 with the selected line replaced by:
+4. For "Program.cs" use a copy of https://github.com/cra0zy/SFEditor/blob/master/SFEditor/SFEditor.Windows/Program.cs#L11 with the selected line replaced by:
 ```c#
 Settings.Init(Platform.Mac, ToolkitType.Cocoa, new[] { ToolkitType.Gtk, ToolkitType.Cocoa });
 ```

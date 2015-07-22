@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+ <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+   <mime-type type="text/spritefont">  
+     <comment>Spritefont File</comment>
+     <generic-icon name="spritefont"/>
+     <icon name="sf-file"/>
+     <glob pattern="*.spritefont"/>
+  </mime-type>
+ </mime-info>

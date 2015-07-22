@@ -1,0 +1,8 @@
+Package: sfeditor
+Version: 1.0-1
+Section: Development
+Architecture: amd64
+Depends: mono-complete (>= 3.0.0), ttf-mscorefonts-installer (>= 1.0)
+Maintainer: Harry <cra0zy@email.com>
+Description: Spritefont Editor
+ Used to create Microsoft .spritefont files

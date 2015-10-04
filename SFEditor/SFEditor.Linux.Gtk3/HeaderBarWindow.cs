@@ -41,7 +41,9 @@ namespace SFEditor
             headerbar1 = new HeaderBar(builder.GetObject("headerbar").Handle);
             builder.Autoconnect(this);
 
-            gtk_window.Titlebar = headerbar1;
+            //gtk_window.Titlebar = headerbar1;
+            headerbar1.AttachToWindow(gtk_window);
+
             headerbar1.ShowCloseButton = true;
             headerbar1.ShowAll();
 

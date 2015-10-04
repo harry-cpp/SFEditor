@@ -34,9 +34,6 @@
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>..\ThirdParty\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
-    <Reference Include="Xwt">
-      <HintPath>..\ThirdParty\Xwt\Gtk\Xwt.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +83,10 @@
     <ProjectReference Include="..\ThirdParty\XwtPlus.TextEditor\XwtPlus.TextEditor\XwtPlus.TextEditor.csproj">
       <Project>{FA8374B9-9E2A-40CE-9291-640419E64301}</Project>
       <Name>XwtPlus.TextEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThirdParty\Xwt\Xwt\Xwt.csproj">
+      <Project>{92494904-35FA-4DC9-BDE9-3A3E87AC49D3}</Project>
+      <Name>Xwt</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
